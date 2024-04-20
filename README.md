@@ -2,9 +2,13 @@
 
 Bash script (+ jq) to output Wireguard stats to JSON
 
+Running this command:
+
 ```
 wg show all dump
 ```
+
+Returns a tab delimited table:
 
 ```SQL
 wg0     kI1DExltXHlkVdBsHqEQZatZf8XvISU7YT1RpDyJsQQ=    (none)  194.55.246.255:7471     10.10.178.16/32        1713634774      38071572        14387132  off
@@ -13,7 +17,8 @@ wg0     nsWiimtOn56BBluAAuAHkNidsNeP11O7vyNRooKLQFs=    (none)  35.181.246.253:1
 wg0     TpiTGEh9O88BRx6AQy7VuMZ9TJuTfAUbUbk36PjECXg=    (none)  87.45.211.255:16029     10.10.178.19/32        1713634814      38162952        14445784  off
 ```
 
-This script will convert the tab delimited tables to JSON and add a timestamp:
+The `wg-json` script will convert the to JSON and add a timestamp:
+
 ```json
 [
   {
@@ -38,4 +43,5 @@ This script will convert the tab delimited tables to JSON and add a timestamp:
   }
 ]
 ```
+
 Runs very quickly thanks to jq - 10k rows takes 0.4 seconds.
