@@ -18,4 +18,4 @@ wg show all dump | \
     rx: .[7],
     timestamp: now | todateiso8601
   }
-' > wireguard-status.json
+' | jq -s > wireguard-status.json
