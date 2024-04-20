@@ -1,4 +1,4 @@
-## wireguard-JSON
+## wireguard-json
 
 Bash script (+ jq) to output Wireguard stats to JSON
 
@@ -17,7 +17,7 @@ wg0     nsWiimtOn56BBluAAuAHkNidsNeP11O7vyNRooKLQFs=    (none)  35.181.246.253:1
 wg0     TpiTGEh9O88BRx6AQy7VuMZ9TJuTfAUbUbk36PjECXg=    (none)  87.45.211.255:16029     10.10.178.19/32        1713634814      38162952        14445784  off
 ```
 
-The `wg-json` script will convert the to JSON and add a timestamp:
+The `wg-json` script will convert it to JSON and add a timestamp:
 
 ```json
 [
