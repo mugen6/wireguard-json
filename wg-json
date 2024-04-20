@@ -2,7 +2,7 @@
 
 # "wg show all dump" appends the port to the public IP (e.g. 1.2.3.4:55555) 
 # we just want the IP so we split on ':'
-# private IP has the CIDR appened to it (e.g. 10.5.6.7/24) so we split on '/'
+# private IP has the CIDR appended to it (e.g. 10.5.6.7/24) so we split on '/'
 
 which jq || { echo "jq required"; exit 1; }
 
