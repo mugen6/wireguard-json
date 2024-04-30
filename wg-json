@@ -8,14 +8,14 @@ which jq || { echo "jq required"; exit 1; }
 
 wg show all dump | \
   jq -R '
-  split("\t") | {
+  split("\t") | select(length > 5) | {
     interface:  .[0],
     publickey:  .[1],
     public_ip:  .[3] | split(":")[0],
     private_ip: .[4] | split("/")[0],
-    latest_handshake: .[5],
-    tx: .[6],
-    rx: .[7],
+    latest_handshake: (.[5] | tonumber),
+    tx: (.[6] | tonumber),
+    rx: (.[7] | tonumber),
     timestamp: now | todateiso8601
-  }
-' | jq -s > wireguard-status.json
+  }' > /home/ubuntu/wireguard.0
+
