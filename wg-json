@@ -19,3 +19,11 @@ wg show all dump | \
     timestamp: now | todateiso8601
   }' > /home/ubuntu/wireguard.0
 
+
+grep AllowedIPs /etc/wireguard/*.peer | grep -E '[A-Z]{2}-[A-Z]{2}' | jq -R '
+  split("/") | { 
+    hostname:   .[3] | split(".")[0], 
+    private_ip: .[3] | split(" ")[2]  
+   }' > wireguard.1
+
+jq -sc '[group_by(.private_ip)[]|add]' wireguard.0 wireguard.1 > wireguard.json

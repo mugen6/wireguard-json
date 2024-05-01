@@ -17,7 +17,7 @@ wg0     nsWiimtOn56BBluAAuAHkNidsNeP11O7vyNRooKLQFs=    (none)  35.181.246.253:1
 wg0     TpiTGEh9O88BRx6AQy7VuMZ9TJuTfAUbUbk36PjECXg=    (none)  87.45.211.255:16029     10.10.178.19/32        1713634814      38162952        14445784  off
 ```
 
-The `wg-json` script will convert it to JSON and add a timestamp:
+The `wg-json` script converts it to JSON and adds a timestamp:
 
 ```json
 [
@@ -26,9 +26,9 @@ The `wg-json` script will convert it to JSON and add a timestamp:
     "publickey": "txe1dW20Y0TE045C7pxsALAIUCtZzO016J1Z2NHzEUE=",
     "public_ip": "186.52.222.66",
     "private_ip": "10.10.178.24",
-    "latest_handshake": "1713635235",
-    "tx": "38127744",
-    "rx": "14719040",
+    "latest_handshake": 1713635235,
+    "tx": 38127744,
+    "rx": 14719040,
     "timestamp": "2024-04-20T17:47:51Z"
   },
   {
@@ -36,9 +36,9 @@ The `wg-json` script will convert it to JSON and add a timestamp:
     "publickey": "PSjCYs4sUHBiLJcZEOT2p45AoalEYuMvJCn8IRZDcW8=",
     "public_ip": "84.34.206.70",
     "private_ip": "10.10.178.25",
-    "latest_handshake": "1713635250",
-    "tx": "38111696",
-    "rx": "14718176",
+    "latest_handshake": 1713635250,
+    "tx": 38111696,
+    "rx": 14718176,
     "timestamp": "2024-04-20T17:47:51Z"
   }
 ]
