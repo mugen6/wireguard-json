@@ -17,7 +17,7 @@ wg show all dump | \
     tx: (.[6] | tonumber),
     rx: (.[7] | tonumber),
     timestamp: now | todateiso8601
-  }' > /home/ubuntu/wireguard.0
+  }' > wireguard.0
 
 
 grep AllowedIPs /etc/wireguard/*.peer | grep -E '[A-Z]{2}-[A-Z]{2}' | jq -R '
